@@ -16,32 +16,53 @@ const ArticleDetailsScreen = React.lazy(() =>
 );
 const ArticlesScreen = React.lazy(() => import('./screens/ArticlesScreen'));
 const CounselingScreen = React.lazy(() => import('./screens/CounselingScreen'));
-const HomeScreen = React.lazy(() => import('./screens/HomeScreen'));
+// const HomeScreen = React.lazy(() => import('./screens/HomeScreen'));
 const LoginScreen = React.lazy(() => import('./screens/LoginScreen'));
 const RegisterScreen = React.lazy(() => import('./screens/RegisterScreen'));
 const UserProfile = React.lazy(() => import('./screens/UserProfile'));
 
-function App() {
+const Homepage = React.lazy(() => import('./screens/Homepage'));
+const Quiz = React.lazy(() => import('./screens/Quiz'));
+const VirtualDiary = React.lazy(() => import('./screens/VirtualDiary'));
+const AudioTheraphy = React.lazy(() => import('./screens/AudioTheraphy'));
+const Yoga = React.lazy(() => import('./screens/Yoga'));
+
+// function App() {
+//   return (
+//     <Suspense fallback={<Loader />}>
+//       <Provider store={store}>
+//         <Router>
+//           <NavbarCmp />
+//           <Routes>
+//             <Route path="/register" element={<RegisterScreen />} />
+//             <Route path="/login" element={<LoginScreen />} />
+//             <Route path="/profile" element={<UserProfile />} />
+//             {/* <Route path="/selfCounsel" element={<CounselingScreen />} /> */}
+//             {/* <Route path="/articles/:id" element={<ArticleDetailsScreen />} /> */}
+//             {/* <Route path="/articles" element={<ArticlesScreen />} /> */}
+//             {/* <Route path="/appointments" element={<AppointmentScreen />} /> */}
+//             <Route path="/" exact element={<Homepage />} />
+//             <Route path="/quiz" element={<Quiz />} />
+//           </Routes>
+//         </Router>
+//         <Footer />
+//       </Provider>
+//     </Suspense>
+//   );
+// }
+
+const App = () => {
   return (
-    <Suspense fallback={<Loader />}>
-      <Provider store={store}>
-        <Router>
-          <NavbarCmp />
-          <Routes>
-            <Route path="/register" element={<RegisterScreen />} />
-            <Route path="/login" element={<LoginScreen />} />
-            <Route path="/profile" element={<UserProfile />} />
-            <Route path="/selfCounsel" element={<CounselingScreen />} />
-            <Route path="/articles/:id" element={<ArticleDetailsScreen />} />
-            <Route path="/articles" element={<ArticlesScreen />} />
-            <Route path="/appointments" element={<AppointmentScreen />} />
-            <Route path="/" exact element={<HomeScreen />} />
-          </Routes>
-        </Router>
-        <Footer />
-      </Provider>
-    </Suspense>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/VirtualDiary" element={<VirtualDiary />} />
+        <Route path="/AudioTheraphy" element={<AudioTheraphy />} />
+        <Route path="/Yoga" element={<Yoga />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

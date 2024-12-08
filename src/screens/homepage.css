@@ -1,0 +1,224 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+:root{
+    --beige-color:#F5F5DC;
+    --green-color:#A3B18A;
+    --brown-color:#805152;
+    --blue-color:#b3c7d6;
+}
+html{
+    font-size:60%;
+    overflow-x:hidden;
+}
+body{
+    background-color: var(--beige-color);
+    color: var(--green-color);
+}
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: var(--beige-color);
+    backdrop-filter: blur(50px);
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    padding: 4rem 15% ;
+    z-index: 1000;
+}
+#menu-icon{
+    font-size: 3.5rem;
+    color: var(--beige-color);
+    display: none;
+}
+.logo{
+    font-size: 3rem;
+    color: var(--green-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.navbar a{
+    font-size: 1.8rem;
+    color: var(--brown-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3 ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+.navbar a:hover{
+    color: var(--blue-color);
+    border-bottom: 3x solid var(--blue-color);
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 15%;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+.home-content h2{
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+.home-content h2:hover{
+    transform: scale(1.1);
+}
+.home-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--brown-color);
+    justify-content: left;
+}
+.home-img img{
+    width:25vw;
+    transition: 3s ease-in-out;
+    cursor: pointer;
+}
+.home-img img:hover{
+    transform: scale(1.1);    
+}
+::-webkit-scrollbar{
+    width: 14px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--brown-color);
+    border-radius: 3rem;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--beige-color);
+}
+
+.service-card {
+    display: flex;
+    width: 100%; /* Makes each service card flexible */
+    max-width: 400px; /* Sets a max width to keep it from stretching too much */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--beige-color);
+    border: 2px solid var(--green-color);
+    border-radius: 3rem;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 25px var(--green-color);
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    box-shadow: 0 0 40px var(--green-color); /* Hover effect */
+}
+
+.service-card:hover{
+    box-shadow:0 0 25px var(--green-color),
+    0 0 45px var(--green-color);  
+    transform: scale (1.02);
+}
+.service-card img{
+    max-width: 200px;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+.service-card h3{
+    font-size: 7rem;
+    color: var(--green-color);
+}
+.service-card p{
+    font-size: 1.6rem;
+    color: var(--brown-color);
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.btn button {
+    background: var(--brown-color);
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    color: var(--beige-color);
+    border: none;
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+}
+.btn button:hover{
+    transform: scale(1.05);
+}
+.btn a{
+    color: var(--beige-color);
+}
+h1{
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+.footer {
+    padding: 2rem;
+    background: var(--beige-color);
+    text-align: center;
+    color: var(--brown-color);
+    font-size: 1.4rem;
+    margin-top: 3rem;
+}
+.testimonial-item {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    color: var(--brown-color);
+    background: var(--blue-color);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.testimonial-item span {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--green-color);
+}
+
+.footer a {
+    color: var(--green-color);
+    transition: color 0.3s;
+}
+.service-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 3rem; /* Space between items */
+    max-width: 900px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the grid */
+}
+
+
+.footer a:hover {
+    color: var(--highlight-color);
+}

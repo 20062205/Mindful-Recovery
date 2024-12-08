@@ -4,11 +4,39 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/ico" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MindMate - Your Mental Health Companion</title>
+    <title>Mindful Recovery</title>
+    <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+  crossorigin="anonymous"
+/>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+/>
+
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+    composerPlaceholder: "Chat with Maya",
+    botConversationDescription: "Your personal HealthBot",
+    botId: "10c0a116-9f9c-4410-9a45-388385c4fb5a",
+    hostUrl: "https://cdn.botpress.cloud/webchat/v0",
+    messagingUrl: "https://messaging.botpress.cloud",
+    clientId: "10c0a116-9f9c-4410-9a45-388385c4fb5a",
+    botName: "Maya",
+    avatarUrl: "https://cdn-icons-png.flaticon.com/256/3304/3304567.png",
+    stylesheet:
+      "https://webchat-styler-css.botpress.app/prod/48b171ca-339e-43ef-b928-d6dcbe7885be/v41214/style.css",
+    enableConversationDeletion: true,
+  });
+</script>
+
   </body>
 </html>

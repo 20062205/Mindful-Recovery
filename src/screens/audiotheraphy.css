@@ -1,0 +1,113 @@
+
+/* Root Variables */
+:root {
+    --beige-bg: #F8F1E9; /* Light beige for the main background */
+    --beige-highlight: #F5E5D7; /* Slightly darker beige for highlight areas */
+    --green-color: #A3B18A; /* Soft green accent */
+    --brown-color: #805152; /* Soft brown accent */
+    --text-color: #4B4B4B; /* Neutral text color */
+}
+
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--beige-bg);
+    color: var(--text-color);
+}
+
+h1.section-headings {
+    text-align: center;
+    color: var(--green-color);
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+h2.section-subheading,
+h2.section-books { /* Styling for both section headers */
+    text-align: center;
+    color: var(--green-color);
+    font-size: 2rem;
+    font-weight: bold; /* Ensures the text is bold */
+    margin: 20px 0;
+}
+
+/* Playlist Section Styling */
+#playlist {
+    padding: 30px 0;
+    background-color: var(--beige-highlight);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    grid-gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.playlist-grid a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid var(--beige-highlight);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.playlist-grid a:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.playlist-grid img {
+    max-width: 100%; /* Ensures image fits within its container */
+    max-height: 250px; /* Keeps the height within bounds */
+    object-fit: cover; /* Makes sure the image fills the space */
+}
+
+/* Image Grid for Audiobooks Section */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+    grid-gap: 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--beige-highlight);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-grid a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid var(--beige-highlight);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-grid a:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling for Audiobooks */
+.image-grid img {
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.image-grid a {
+    text-decoration: none;
+}
